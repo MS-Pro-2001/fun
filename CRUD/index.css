@@ -1,0 +1,42 @@
+.formContainer {
+    border: 2px solid red;
+    padding: 20px;
+}
+
+form>div {
+    margin: 10px 0 0 0;
+}
+
+
+.hobbies {
+    display: flex;
+
+    /* border: 2px solid red; */
+}
+
+.name {
+    display: flex;
+    border: 2px solid red;
+}
+
+
+input[name="Name"] {
+    /* border: 2px solid red; */
+    width: 100%;
+
+}
+
+input {
+    margin: 0 0 0 10px;
+}
+
+/* .hobbies-item {
+    border: 2px solid red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+} */

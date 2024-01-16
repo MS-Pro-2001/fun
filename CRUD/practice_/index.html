@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date?</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 20px
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            cursor: pointer;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            width: 70px;
+            background-color: lightcoral;
+
+        }
+
+        #move {
+            position: relative;
+
+            /* transition: transform 0s;
+            animation-name: run;
+            animation-duration: 4s;
+            animation-delay: 3s; */
+
+
+        }
+
+        /* @keyframes run {
+
+            to {
+                visibility: hidden;
+                display: none;
+
+            }
+        } */
+
+        /* #move:hover {
+            background-color: red;
+            margin-left: 100px;
+            transform: translate(100px, 10px);
+
+
+        } */
+
+        /* img {
+            margin: 20px;
+            border-radius: 20px;
+
+
+
+        } */
+
+        .visuallyHidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="haan" class="h3">Would you like to go on a date with me?</div>
+        <img id="no" src="./images/no.gif" alt="" width="200px" height="200px">
+
+        <img id="yes" src="./images/yes.gif" alt="" width="200px" height="200px">
+
+        <div class="btn">
+            <button onclick="haanHai()">YES</button>
+            <button id="move" onclick="frame()">NO</button>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        let btn = document.getElementById("move");
+        let haan = document.getElementById("haan")
+
+        let x = 0;
+        let count = 0
+        function frame() {
+            count++
+            x += 80
+
+            if (x >= 200) {
+                if (count == 4) {
+                    btn.display = "none"
+                }
+
+
+                btn.style.bottom = x + "px"
+                btn.style.left = x + "px"
+
+            }
+            else {
+                btn.style.left = x + "px"
+
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+        function haanHai() {
+            haan.innerText = "Sacchiiii...❤️❤️❤️❤️❤️❤️❤️❤️"
+
+            document.getElementById("no").style.display = "none"
+            document.getElementById("yes").style.display = "block"
+
+        }
+
+        document.getElementById("yes").style.display = "none"
+        // setTimeout(() => {
+
+        //     document.getElementById("move").classList.add("visuallyHidden")
+
+        // }, 10000)
+
+
+
+    </script>
+
+    <!-- <script>
+
+        const arr = [1, 2, 3, [4, [5, 6]], 7]
+
+
+
+        // console.log(sizeof(arr));
+
+        const dummyArr = []
+        // console.log(arr[3]);
+
+
+        function flattenData(data) {
+
+            for (let i = 0; i < data.length; i++) {
+
+                const elementLength = data[i].length;
+                if (elementLength > 0) {
+                    flattenData(data[i])
+                }
+                else {
+                    dummyArr.push(data[i])
+
+                }
+
+
+            }
+
+        }
+
+        flattenData(arr)
+
+        console.log("new array", dummyArr);
+
+        // console.log(result);
+    </script> -->
+
+</body>
+
+</html>
